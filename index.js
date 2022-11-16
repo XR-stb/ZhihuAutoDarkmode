@@ -16,7 +16,7 @@
   let isFirst = true
   const changeTheme = isDark => {
     let html = document.getElementsByTagName('html')[0]
-    if (isDark) {
+    if (!isDark) {
       fetch('/?theme=dark')
       if (html.getAttribute('data-theme') === 'light') {
         isFirst ? location.reload() : html.setAttribute('data-theme', 'dark')
